@@ -1,0 +1,15 @@
+<div class="searchContainer">
+  <form action="/search" method="get">
+    <input
+      class="search"
+      id="searchleft"
+      type="search"
+      name="q"
+      placeholder="Searchsss"
+      (input)="changeSearchVal($event)"
+    />
+    <label class="button searchbutton" for="searchleft"
+      ><span class="mglass">&#9906;</span></label
+    >
+  </form>
+</div>

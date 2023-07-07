@@ -1,0 +1,35 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 1.5rem 8rem;
+  position: relative;
+  //   background-color: black;
+
+  img {
+    width: 500px;
+  }
+  p {
+    font-size: 40px;
+    width: 32%;
+    text-align: center;
+    color: #000;
+    line-height: 2;
+    overflow: hidden; /* Ensure text doesn't overflow the container */
+    border-right: 0.15em solid #000; /* Add blinking cursor effect */
+    white-space: nowrap; /* Prevent line breaks */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    animation: typewriter 5s steps(55) infinite;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
