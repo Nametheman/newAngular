@@ -1,0 +1,13 @@
+<section>
+  <div *ngFor="let p of products; index as idx">
+    <div class="productCard">
+      <div class="image-container"><img [src]="p.image" alt="" /></div>
+      <div class="productDetailsCont">
+        <p class="name">Breed: {{ p.breed }}</p>
+        <p class="description">{{ p.description }}</p>
+        <p class="habitat">Major Habitat: {{ p.habitat }}</p>
+        <p class="price">Price: ${{ p.price }}</p>
+      </div>
+    </div>
+  </div>
+</section>
