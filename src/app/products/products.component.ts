@@ -8,104 +8,138 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
-
   products = [
     {
       id: 1,
-      name: 'Strong Rug',
-      price: 19.99,
-      description:
-        "This is Widget A. It's a fantastic product that will revolutionize your life.",
-      category: 'Electronics',
+      breed: 'Polar Bear',
+      price: 5000,
+      color: 'White',
+      size: 'Large',
+      habitat: 'Arctic',
       image:
-        'https://www.amazon.com/Luxurious-Elegant-Carpets-Bedroom-Playroom/dp/B09NXV1SFB',
+        'https://environment.co/wp-content/uploads/sites/4/2022/10/hans-jurgen-mager-LVT82myoXSE-unsplash.jpg',
+      description:
+        'The polar bear is a large bear species native to the Arctic. It has a thick white fur coat and is adapted to living in freezing temperatures.',
     },
     {
       id: 2,
-      name: 'Hisense Tv',
-      price: 29.99,
-      description:
-        'Introducing Gizmo B, the ultimate gadget for tech enthusiasts.',
-      category: 'Electronics',
+      breed: 'Grizzly Bear',
+      price: 3000,
+      color: 'Brown',
+      size: 'Large',
+      habitat: 'North America',
       image:
-        'https://cdn.shopify.com/s/files/1/0280/4069/1789/products/Picsart_22-11-20_15-37-53-960.jpg?v=1668959615',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/800px-2010-kodiak-bear-1.jpg',
+      description:
+        'The grizzly bear is a powerful bear species found in North America. It has a distinctive hump on its shoulders and can be brown, black, or blonde in color.',
     },
     {
       id: 3,
-      name: 'Super Toy',
-      price: 9.99,
+      breed: 'Black Bear',
+      price: 2000,
+      color: 'Black',
+      size: 'Medium',
+      habitat: 'North America',
+      image:
+        'https://images.immediate.co.uk/production/volatile/sites/23/2014/08/GettyImages-635725340-33bbe2e.jpg?quality=90&resize=980,654',
       description:
-        'The Super Toy is a fun and interactive plaything for kids of all ages.',
-      category: 'Toys',
-      image: 'https://m.media-amazon.com/images/I/71CTY73XK5L.jpg',
+        'The black bear is a medium-sized bear species found in various parts of North America. Despite its name, it can be black, brown, or even blonde in color.',
     },
     {
       id: 4,
-      name: 'Fashion Watch',
-      price: 49.99,
-      description: 'Stay stylish with our elegant and trendy Fashion Watch.',
-      category: 'Fashion',
+      breed: 'Panda Bear',
+      price: 6000,
+      color: 'Black and White',
+      size: 'Medium',
+      habitat: 'China',
       image:
-        'https://content.rolex.com/v7/dam/collection/family-pages/classic-watches/datejust/share/classic-watches-datejust-all-models-share_m126233-0039_2107jva_001.jpg',
+        'https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2020/08/1140-panda-smithsonian.jpg',
+      description:
+        'The panda bear is a beloved bear species native to China. It is known for its distinctive black and white fur pattern and its bamboo diet.',
     },
     {
       id: 5,
-      name: 'Fitness Tracker',
-      price: 79.99,
-      description:
-        'Monitor your health and track your fitness goals with our advanced Fitness Tracker.',
-      category: 'Health & Fitness',
+      breed: 'Kodiak Bear',
+      price: 4000,
+      color: 'Brown',
+      size: 'Large',
+      habitat: 'Alaska',
       image:
-        'https://pyxis.nymag.com/v1/imgs/3be/54b/7a34aadc99a7c4290c204c434185cd7c58-3-24-Watch.rsquare.w1200.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/640px-2010-kodiak-bear-1.jpg',
+      description:
+        'The Kodiak bear is a subspecies of the brown bear found in the Kodiak Archipelago of Alaska. It is one of the largest bear species.',
     },
     {
       id: 6,
-      name: 'Gourmet Coffee',
-      price: 12.99,
-      description:
-        'Indulge in the rich flavors of our carefully selected Gourmet Coffee.',
-      category: 'Food & Beverages',
+      breed: 'Sloth Bear',
+      price: 3500,
+      color: 'Black',
+      size: 'Medium',
+      habitat: 'India',
       image:
-        'https://images-cdn.ubuy.co.in/6350f473f68eee5c5a276ad1-cafe-de-loja-gourmet-coffee-beans.jpg',
+        'https://nationalzoo.si.edu/sites/default/files/animals/slothbear-002.jpg',
+      description:
+        'The sloth bear is a bear species found in the Indian subcontinent. It has long claws and a shaggy coat, and it primarily feeds on insects.',
     },
     {
       id: 7,
-      name: 'Outdoor Adventure Kit',
-      price: 39.99,
+      breed: 'Sun Bear',
+      price: 4500,
+      color: 'Black',
+      size: 'Small',
+      habitat: 'Southeast Asia',
+      image:
+        'https://cdn.britannica.com/12/232812-050-918C866F/Sun-bear-Helarctos-malayanus-tongue.jpg',
       description:
-        'Embark on exciting outdoor adventures with our comprehensive Adventure Kit.',
-      category: 'Sports & Outdoors',
-      image: 'https://m.media-amazon.com/images/I/91p0sbAVpZS.jpg',
+        'The sun bear is the smallest bear species and is found in Southeast Asia. It has a distinctive golden crescent-shaped mark on its chest.',
     },
     {
       id: 8,
-      name: 'Classic Book Set',
-      price: 59.99,
-      description:
-        'Immerse yourself in timeless literature with our Classic Book Set.',
-      category: 'Books',
+      breed: 'Andean Bear',
+      price: 5500,
+      color: 'Black',
+      size: 'Medium',
+      habitat: 'South America',
       image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Harvard_Classics.jpg/1200px-Harvard_Classics.jpg',
+        'https://www.volunteerlatinamerica.com/up-images/blog-images/andean-bear-all-you-need-to-know.jpg',
+      description:
+        'The Andean bear, also known as the spectacled bear, is found in the Andean region of South America. It is the only bear species native to South America.',
     },
     {
       id: 9,
-      name: 'Luxury Pen',
-      price: 99.99,
-      description:
-        'Experience the joy of writing with our exquisite Luxury Pen.',
-      category: 'Office Supplies',
+      breed: 'Spectacled Bear',
+      price: 5200,
+      color: 'Black',
+      size: 'Medium',
+      habitat: 'South America',
       image:
-        'https://www.u-buy.com.ng/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFHcFJzMVZPTEwuX0FDX1NMMTUwMF8uanBn.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/a/a7/Urso_de_%C3%B3culos.jpg',
+      description:
+        'The spectacled bear, also known as the Andean bear, is found in the Andean region of South America. It is named after the distinctive rings around its eyes.',
     },
     {
       id: 10,
-      name: 'Decorative Candle',
-      price: 14.99,
-      description:
-        'Create a warm and cozy ambiance with our beautiful Decorative Candle.',
-      category: 'Home Decor',
+      breed: 'Malayan Sun Bear',
+      price: 4800,
+      color: 'Black',
+      size: 'Small',
+      habitat: 'Southeast Asia',
       image:
-        'https://images.squarespace-cdn.com/content/v1/58dce485a5790a44f40dbde6/1606761328155-CX2NXFA8Z5XUSX5S4XGS/Decorating+candles+with+pressed+leaves',
+        'https://wildark.org/wp-content/uploads/2019/05/AdobeStock_129134705_p.jpg',
+      description:
+        'The Malayan sun bear is a small bear species found in Southeast Asia. It has a dark coat and a distinctive orange or yellow crescent mark on its chest.',
+    },
+    {
+      id: 11,
+      breed: 'American Black Bear',
+      price: 2800,
+      color: 'Black',
+      size: 'Medium',
+      habitat: 'North America',
+      image:
+        'https://bear.org/wp-content/uploads/2008/02/20130607_Bow-copy.jpg',
+      description:
+        'The American black bear is a medium-sized bear species found in various parts of North America. It can have different color variations, including black, brown, or blonde.',
     },
   ];
 }

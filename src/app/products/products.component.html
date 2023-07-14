@@ -1,3 +1,16 @@
+<section>
+  <div *ngFor="let p of products; index as idx">
+    <div class="productCard">
+      <div class="image-container"><img [src]="p.image" alt="" /></div>
+      <div class="productDetailsCont">
+        <p class="name">Breed: {{ p.breed }}</p>
+        <p class="description">{{ p.description }}</p>
+        <p class="habitat">Major Habitat: {{ p.habitat }}</p>
+        <p class="price">Price: ${{ p.price }}</p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- <div *ngFor="let item of [1, 4, 5, 6, 7]">
   <p>
     {{ item }}
@@ -11,7 +24,7 @@
     </div>
     <div>
       <div class="name-container">
-        <h6>{{ p.name }}</h6>
+        <h6>{{ p.breed }}</h6>
       </div>
       <div class="detailContainer">
         <div></div>

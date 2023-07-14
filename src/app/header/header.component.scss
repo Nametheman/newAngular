@@ -1,11 +1,24 @@
 section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 80px;
-  padding: 1.5rem 8rem;
-  position: relative;
-  //   background-color: black;
+  width: 100%;
+  height: 800px;
+  background-image: linear-gradient(
+      178deg,
+      rgba(47, 47, 47, 0.888) 0%,
+      rgba(12, 12, 12, 0.788) 53%,
+      rgba(0, 0, 0, 0.788) 100%
+    ),
+    url("../../assets/Images/polar.gif");
+  // /* backdrop-filter: blur(125px); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #d0ebff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 
   img {
     width: 500px;
