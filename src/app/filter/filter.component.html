@@ -1,0 +1,34 @@
+<div class="container">
+  <span>Filter: </span>
+  <div class="inputCont">
+    <input
+      type="radio"
+      name="filter"
+      value="all"
+      [(ngModel)]="selectedRadioBtnVal"
+      (change)="changeInputVal()"
+    />
+    <span>{{ "All (" + all + ")" }}</span>
+  </div>
+  <div class="inputCont">
+    <input
+      type="radio"
+      name="filter"
+      value="common"
+      [(ngModel)]="selectedRadioBtnVal"
+      (change)="changeInputVal()"
+    />
+    <span>{{ "Common (" + common + ")" }}</span>
+  </div>
+
+  <div class="inputCont">
+    <input
+      type="radio"
+      name="filter"
+      value="rare"
+      [(ngModel)]="selectedRadioBtnVal"
+      (change)="changeInputVal()"
+    />
+    <span>{{ "Rare (" + rare + ")" }}</span>
+  </div>
+</div>

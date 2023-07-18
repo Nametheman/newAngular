@@ -1,34 +1,22 @@
 <section>
-  <div *ngFor="let p of products; index as idx">
-    <div class="productCard">
-      <div class="image-container"><img [src]="p.image" alt="" /></div>
-      <div class="productDetailsCont">
-        <p class="name">Breed: {{ p.breed }}</p>
-        <p class="description">{{ p.description }}</p>
-        <p class="habitat">Major Habitat: {{ p.habitat }}</p>
-        <p class="price">Price: ${{ p.price }}</p>
+  <app-filter
+    [total]="getAllProducts()"
+    [common]="getCommonProducts()"
+    [rare]="getRareProducts()"
+    (radioInputChanged)="onRadioInputChange($event)"
+  ></app-filter>
+  <ng-container *ngFor="let p of products; index as idx">
+    <div *ngIf="changedInputValue === 'all' || changedInputValue === p.rarity">
+      <div class="productCard">
+        <div class="image-container"><img [src]="p.image" alt="" /></div>
+        <div class="productDetailsCont">
+          <p class="name">Breed: {{ p.breed }}</p>
+          <p class="description">{{ p.description }}</p>
+          <p class="habitat">Major Habitat: {{ p.habitat }}</p>
+          <p class="price">Price: ${{ p.price }}</p>
+          <p class="price">Rarity: {{ p.rarity.toUpperCase() }}</p>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 </section>
-<!-- <div *ngFor="let item of [1, 4, 5, 6, 7]">
-  <p>
-    {{ item }}
-  </p>
-</div> -->
-
-<div *ngFor="let p of products; let i = index">
-  <div class="product-container">
-    <div class="image-container">
-      <img [src]="p.image" alt="" />
-    </div>
-    <div>
-      <div class="name-container">
-        <h6>{{ p.breed }}</h6>
-      </div>
-      <div class="detailContainer">
-        <div></div>
-      </div>
-    </div>
-  </div>
-</div>

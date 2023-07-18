@@ -16,6 +16,7 @@ export class ProductsComponent implements OnInit {
       color: 'White',
       size: 'Large',
       habitat: 'Arctic',
+      rarity: 'rare',
       image:
         'https://environment.co/wp-content/uploads/sites/4/2022/10/hans-jurgen-mager-LVT82myoXSE-unsplash.jpg',
       description:
@@ -28,6 +29,7 @@ export class ProductsComponent implements OnInit {
       color: 'Brown',
       size: 'Large',
       habitat: 'North America',
+      rarity: 'common',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/800px-2010-kodiak-bear-1.jpg',
       description:
@@ -39,6 +41,7 @@ export class ProductsComponent implements OnInit {
       price: 2000,
       color: 'Black',
       size: 'Medium',
+      rarity: 'common',
       habitat: 'North America',
       image:
         'https://images.immediate.co.uk/production/volatile/sites/23/2014/08/GettyImages-635725340-33bbe2e.jpg?quality=90&resize=980,654',
@@ -52,6 +55,7 @@ export class ProductsComponent implements OnInit {
       color: 'Black and White',
       size: 'Medium',
       habitat: 'China',
+      rarity: 'rare',
       image:
         'https://cdn.aarp.net/content/dam/aarp/home-and-family/family-and-friends/2020/08/1140-panda-smithsonian.jpg',
       description:
@@ -64,6 +68,7 @@ export class ProductsComponent implements OnInit {
       color: 'Brown',
       size: 'Large',
       habitat: 'Alaska',
+      rarity: 'rare',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/640px-2010-kodiak-bear-1.jpg',
       description:
@@ -76,6 +81,7 @@ export class ProductsComponent implements OnInit {
       color: 'Black',
       size: 'Medium',
       habitat: 'India',
+      rarity: 'rare',
       image:
         'https://nationalzoo.si.edu/sites/default/files/animals/slothbear-002.jpg',
       description:
@@ -88,6 +94,7 @@ export class ProductsComponent implements OnInit {
       color: 'Black',
       size: 'Small',
       habitat: 'Southeast Asia',
+      rarity: 'common',
       image:
         'https://cdn.britannica.com/12/232812-050-918C866F/Sun-bear-Helarctos-malayanus-tongue.jpg',
       description:
@@ -100,6 +107,7 @@ export class ProductsComponent implements OnInit {
       color: 'Black',
       size: 'Medium',
       habitat: 'South America',
+      rarity: 'common',
       image:
         'https://www.volunteerlatinamerica.com/up-images/blog-images/andean-bear-all-you-need-to-know.jpg',
       description:
@@ -112,6 +120,7 @@ export class ProductsComponent implements OnInit {
       color: 'Black',
       size: 'Medium',
       habitat: 'South America',
+      rarity: 'rare',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/a/a7/Urso_de_%C3%B3culos.jpg',
       description:
@@ -124,6 +133,7 @@ export class ProductsComponent implements OnInit {
       color: 'Black',
       size: 'Small',
       habitat: 'Southeast Asia',
+      rarity: 'common',
       image:
         'https://wildark.org/wp-content/uploads/2019/05/AdobeStock_129134705_p.jpg',
       description:
@@ -136,10 +146,30 @@ export class ProductsComponent implements OnInit {
       color: 'Black',
       size: 'Medium',
       habitat: 'North America',
+      rarity: 'rare',
       image:
-        'https://bear.org/wp-content/uploads/2008/02/20130607_Bow-copy.jpg',
+        'https://images.immediate.co.uk/production/volatile/sites/23/2014/08/GettyImages-635725340-33bbe2e.jpg?quality=90&resize=980,654',
       description:
         'The American black bear is a medium-sized bear species found in various parts of North America. It can have different color variations, including black, brown, or blonde.',
     },
   ];
+
+  getAllProducts() {
+    return this.products.length;
+  }
+
+  getRareProducts() {
+    return this.products.filter((product) => product.rarity === 'rare').length;
+  }
+
+  getCommonProducts() {
+    return this.products.filter((product) => product.rarity === 'common')
+      .length;
+  }
+
+  changedInputValue: string = 'all';
+
+  onRadioInputChange(data: string) {
+    this.changedInputValue = data;
+  }
 }
